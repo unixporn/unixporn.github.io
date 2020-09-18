@@ -1,0 +1,126 @@
+:root {
+	--red: #c96565;
+	--yellow: #c9b065;
+	--lime: #8cba5d;
+	--green: #65b87a;
+	--cyan: #60b5a8;
+	--blue: #658fc9;
+	--purple: #8665c9;
+	--pink: #c965c1;
+	--accent: var(--blue);
+
+	--background: #fff;
+	--backdrop: #eee;
+	--foreground: #444;
+	--shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+body {
+	background: var(--background);
+	max-width: 900px;
+	margin: 30px auto;
+	padding: 40px 20px 20px 30px;
+	border-radius: 8px;
+	box-shadow: var(--shadow);
+	transition: margin 100ms;
+}
+
+html {
+	color: var(--foreground);
+	background: var(--backdrop);
+	font-family: "Noto Sans", Roboto, sans-serif;
+}
+
+h1 {
+	font-weight: 600;
+}
+
+h2 {
+	margin-left: 20px;
+}
+
+a,
+h2,
+.accent {
+	color: var(--accent);
+}
+
+a {
+	text-align: right;
+	margin-right: 20px;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+h1 {
+	text-align: center;
+}
+
+.links p > span {
+	display: block;
+}
+
+@media (min-width: 600px) {
+	.links p {
+		display: grid;
+		grid-template-columns: 12ch calc(100% - 12ch);
+		margin-left: 12px;
+		margin: 8px 0px;
+	}
+}
+
+@media (max-width: 940px) {
+	body {
+		margin-top: 0px;
+	}
+}
+
+/* Animation code was kindly supplied by paradox - github.com/safinsingh */
+.gradient {
+	background: linear-gradient(
+		to right,
+		var(--red),
+		var(--yellow),
+		var(--lime),
+		var(--green),
+		var(--cyan),
+		var(--blue),
+		var(--purple),
+		var(--pink)
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: rainbow 5s ease infinite;
+	background-size: 400% 100%;
+}
+
+@keyframes rainbow {
+	0%,
+	100% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 100% 0;
+	}
+}
+
+/* dark mode */
+@media (prefers-color-scheme:dark) {
+	:root {
+		--red: #f76e6e;
+		--yellow: #f7d564;
+		--lime: #b3f76e;
+		--green: #6ef790;
+		--cyan: #6ef7f7;
+		--blue: #83a0f7;
+		--purple: #b36ef7;
+		--pink: #f76ed5;
+		--accent: var(--blue);
+
+		--background: #1c1c1c;
+		--backdrop: #131313;
+		--foreground: #ddd;
+		--shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+	}
+}
