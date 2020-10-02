@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 :root {
 	--red: #c96565;
 	--yellow: #c9b065;
@@ -13,6 +15,10 @@
 	--backdrop: #eee;
 	--foreground: #444;
 	--shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+p {
+	margin-left: 5px;
 }
 
 body {
@@ -31,12 +37,17 @@ html {
 	font-family: "Noto Sans", Roboto, sans-serif;
 }
 
+span {
+	font-family: "Open Sans";
+}
+
 h1 {
-	font-weight: 600;
+	font-family: fantasy;
+	font-weight: 800;
 }
 
 h2 {
-	margin-left: 20px;
+	margin-left: 10px;
 }
 
 a,
@@ -47,9 +58,9 @@ h2,
 
 a {
 	text-align: right;
-	margin-right: 20px;
+	margin-right: 30px;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 400;
 }
 
 h1 {
@@ -108,18 +119,18 @@ h1 {
 /* dark mode */
 @media (prefers-color-scheme:dark) {
 	:root {
-		--red: #f76e6e;
-		--yellow: #f7d564;
+		--red: #fd8181;
+		--yellow: #ffe389;
 		--lime: #b3f76e;
 		--green: #6ef790;
-		--cyan: #6ef7f7;
-		--blue: #83a0f7;
-		--purple: #b36ef7;
-		--pink: #f76ed5;
+		--cyan: #8cffff;
+		--blue: #81a0ff;
+		--purple: #ce9dff;
+		--pink: #fd88e0;
 		--accent: var(--blue);
 
-		--background: #1c1c1c;
-		--backdrop: #131313;
+		--background: #222222;
+		--backdrop: #111111;
 		--foreground: #ddd;
 		--shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 	}
