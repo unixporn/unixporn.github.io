@@ -44,25 +44,55 @@ h2,
 .accent {
 	color: var(--accent);
 }
+.links {
+	display: flex;
+	flex-direction: column;
+}
+.container {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+}
 
 a {
-	text-align: right;
-	margin-right: 20px;
 	text-decoration: none;
 	font-weight: 500;
+	background: var(--backdrop);
+	margin: 5px;
+	padding: 10px;
+	min-width: 65px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+a:hover {
+	background: linear-gradient(
+		to right,
+		var(--red),
+		var(--yellow),
+		var(--lime),
+		var(--green),
+		var(--cyan),
+		var(--blue),
+		var(--purple),
+		var(--pink)
+	);
+	color: transparent;
+	animation: rainbow 5s ease infinite;
+	background-size: 400% 100%;
+	color: var(--background);
 }
 
 h1 {
 	text-align: center;
 }
 
-.links p > span {
-	display: block;
-}
-
-@media (min-width: 600px) {
+@media (max-width: 600px) {
+	.container {
+		flex-direction: column;
+	}
 	.links p {
-		display: grid;
 		grid-template-columns: 12ch calc(100% - 12ch);
 		margin-left: 12px;
 		margin: 8px 0px;
